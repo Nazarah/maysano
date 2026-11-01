@@ -61,7 +61,7 @@ const kentaroFaqs = [
   ],
   [
     'Does Kentaro make decisions or act on its own?',
-    'Not in v0.1. Kentaro can retrieve and explain sourced context, validate local governance objects, form local drafts and classify a proposed request. It does not write to Maysano, execute business actions or process approvals. A result that is structurally in scope is still not permission to act.',
+    'Not in v0.2.9. Kentaro can create and analyse an evidence-labelled local DesignPortfolio, including a visual canvas, reports and draft product definitions. It does not write to Maysano, execute business actions, process approvals or certify production readiness. A result that is structurally in scope is still not permission to act.',
   ],
   [
     'Who remains accountable for the outcome?',
@@ -81,7 +81,7 @@ const kentaroFaqs = [
   ],
   [
     'What is available now, and what comes later?',
-    'v0.1 is the released read-only local Harness. The next target, v0.2, is governed graph changes through approved Change Contracts, with Maysano validating and recording every change. Agent-client integrations and optional execution runtimes are later roadmap phases. The roadmap shows direction, not a promise that future capabilities are already available.',
+    'v0.2.9 is the released local business-design Harness. Governed company-graph changes are planned for v0.3, agent-client access for v0.4, and optional external execution runtimes for v0.5. The roadmap shows direction, not a promise that future capabilities are already available.',
   ],
 ] as const
 
@@ -89,18 +89,18 @@ const kentaroRoadmap = [
   { phase: 'Phase 0', title: 'Product foundation', summary: 'Establish the MIT-licensed GitHub project, package skeleton, release workflow, product schemas and a demonstrable reference use case.', status: 'Foundation' },
   {
     phase: 'Phase 1',
-    title: 'v0.1.0 — Local governed Harness',
-    summary: 'Kentaro v0.1.0 is released on GitHub and PyPI. Initialise a Codex project, run the CLI from use case to execution, evidence and report, with local or cloud model configuration and read-only access through the Maysano Platform API.',
+    title: 'v0.2.9 — Local business-design Harness',
+    summary: 'Kentaro v0.2.9 is released on GitHub and PyPI. Set up a Codex project, start with a business problem, and create an evidence-labelled local DesignPortfolio, visual canvas, reports and draft AI and data-product definitions. No Maysano writes, approvals or production-readiness claim.',
     status: 'Released',
     releases: [
-      { label: 'GitHub release', href: 'https://github.com/Maysano/Kentaro/releases/tag/v0.1.0' },
+      { label: 'GitHub release', href: 'https://github.com/Maysano/Kentaro/releases/tag/v0.2.9' },
       { label: 'PyPI package', href: 'https://pypi.org/project/kentaro/' },
     ],
   },
-  { phase: 'PHASE 2', title: 'v0.2 – Governed graph changes', summary: 'Create and update objectives, use cases and data products through approved Change Contracts. Kentaro keeps task-scoped context. Maysano validates and records every change.', status: 'Active build target', active: true },
-  { phase: 'Phase 3', title: 'v0.3 — Agent-client integrations', summary: 'Add Codex, Claude Code and OpenCode integrations on the same Kentaro core, CLI and schemas, with the MCP server, structured JSON, reusable templates and stronger gates.', status: 'Planned' },
-  { phase: 'Phase 4', title: 'v0.4 — Optional external execution runtimes', summary: 'Add optional external execution runtimes, such as HarnessRouter, while Kentaro keeps governance, evidence and customer-controlled credentials comparable.', status: 'Planned' },
-  { phase: 'Phase 5', title: 'Maysano portfolio and enterprise operations', summary: 'Build the user-facing platform, portfolio view, platform-hosted agents and organisation-level governance above the proven Harness connection.', status: 'Planned' },
+  { phase: 'Phase 2', title: 'v0.3 — Governed company-graph changes', summary: 'Create and revise objectives, use cases and data products through Maysano-approved, scoped graph changes. Kentaro keeps task-scoped context; Maysano validates and records every change.', status: 'Planned' },
+  { phase: 'Phase 3', title: 'v0.4 — Agent-client integrations', summary: 'Add Codex, Claude Code and OpenCode integrations on the same Kentaro core, CLI and schemas, with the MCP server, structured JSON, reusable templates and stronger gates.', status: 'Planned' },
+  { phase: 'Phase 4', title: 'v0.5 — Optional external execution runtimes', summary: 'Add optional external execution runtimes, such as HarnessRouter, while Kentaro keeps governance, evidence and customer-controlled credentials comparable.', status: 'Planned' },
+  { phase: 'Phase 5', title: 'v0.6 — Maysano portfolio and enterprise operations', summary: 'Build the user-facing platform, portfolio view, platform-hosted agents and organisation-level governance above the proven Harness connection.', status: 'Planned' },
 ]
 
 const kentaroFollowPanelStyles = `
@@ -454,11 +454,11 @@ function KentaroHome() {
             <div className="section-intro">
               <p className="eyebrow">KENTARO HARNESS ROADMAP</p>
               <h2 id="kentaro-roadmap-title" className="kentaro-section-title">From a business objective to evidence-backed delivery.</h2>
-              <p className="section-copy">Kentaro harness starts as a local harness that turns products, objectives, and use cases into governed execution packages. Each next phase extends that proven foundation, first into Maysano, then into agent clients and approved execution runtimes.</p>
+              <p className="section-copy">Kentaro harness now supports local, evidence-labelled business design from objectives and use cases to draft AI and data products. Each next phase extends that foundation into Maysano-governed graph changes, agent clients and approved execution runtimes.</p>
             </div>
             <ol className="kentaro-roadmap-grid kentaro-episode-grid" aria-label="Kentaro delivery roadmap" style={{ margin: 0, padding: 0, listStyle: 'none' }}>
               {kentaroRoadmap.map((phase) => (
-                <li key={phase.phase} className="kentaro-roadmap-card kentaro-episode-card" style={phase.active ? { borderColor: 'hsl(var(--primary))', background: 'hsl(var(--accent))' } : undefined}>
+                <li key={phase.phase} className="kentaro-roadmap-card kentaro-episode-card">
                   <div className="kentaro-episode-card__content">
                     <p className="kentaro-episode-card__number">{phase.phase}</p>
                     <h3>{phase.title}</h3>
