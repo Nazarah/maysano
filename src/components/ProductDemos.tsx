@@ -3,8 +3,8 @@ import { SectionIntro } from './SectionIntro'
 const demos = [
   {
     title: 'How a Business Objective Becomes a Use Case | Maysano Demo',
-    youtubeUrl: 'https://www.youtube.com/watch?v=z0zAzXEaVIs',
-    embedUrl: 'https://www.youtube-nocookie.com/embed/z0zAzXEaVIs',
+    youtubeUrl: 'https://youtu.be/1XRNU8qyqeM',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/1XRNU8qyqeM',
     paragraphs: [
       'Most data product work starts before there is a data product. It starts with a business outcome.',
       'In this Maysano demo, a Business Owner turns a defined objective into a Use Case with AI assistance. They connect the Data Products already available and see which capabilities support the work today.',
